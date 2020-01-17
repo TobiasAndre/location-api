@@ -10,7 +10,7 @@ class LocationsController < ApplicationController
 
     render json: coordinates.to_json
   rescue LocationAdapter::LocationUnavailable
-    render json: { error: "Location not found", value: 0 }, status: :unprocessable_entity
+    render json: { error: "Location not found" }, status: :unprocessable_entity
   end
 
   private
@@ -30,6 +30,6 @@ class LocationsController < ApplicationController
   end
 
   def cache_key
-    "#{params.dig(:location)}}"
+    "#{params.dig(:location)}"
   end
 end

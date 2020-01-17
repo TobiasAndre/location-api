@@ -28,7 +28,7 @@ Rails.application.configure do
     config.action_controller.perform_caching = false
 
     config.cache_store = :redis_store, {
-      expires_in: 90.days,
+      expires_in: 30.days,
       namespace: "cache",
       redis: { host: "redis", port: 6379, db: 0 }
     }

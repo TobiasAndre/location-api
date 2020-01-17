@@ -9,6 +9,12 @@ abort("The Rails environment is running in production mode!") if Rails.env.produ
 require 'rspec/rails'
 require 'vcr'
 
+require "simplecov"
+SimpleCov.start do
+  add_filter %r{^/config/}
+  add_filter %r{^/spec/rails_helper.rb}
+end
+
 VCR.configure do |config|
   config.cassette_library_dir = "spec/fixtures/vcr_cassettes"
   config.hook_into :webmock
