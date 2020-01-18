@@ -11,8 +11,4 @@ class ApplicationController < ActionController::API
       User.find_by(token: token)
     end
   end
-
-  def current_user
-    @current_user ||= authenticate
-  end
 end
