@@ -30,6 +30,6 @@ class LocationsController < ApplicationController
   end
 
   def cache_key
-    "#{params.dig(:location)}"
+    params.dig(:location).to_s
   end
 end

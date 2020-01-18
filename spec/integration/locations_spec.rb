@@ -10,7 +10,6 @@ describe "Locations API" do
 
     get "Search location coordinates" do
       tags "Location coordinates"
-      consumes 'application/json'
       produces 'application/json'
 
       response "200", "location found" do

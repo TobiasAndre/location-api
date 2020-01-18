@@ -21,7 +21,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Fri, 17 Jan 2020 22:28:19 GMT
+      - Sat, 18 Jan 2020 00:48:41 GMT
       Content-Type:
       - application/json; charset=UTF-8
       Transfer-Encoding:
@@ -29,8 +29,8 @@ http_interactions:
       Connection:
       - keep-alive
       Set-Cookie:
-      - __cfduid=db615a80a4d466c4580afd9d0d8ef01bb1579300099; expires=Sun, 16-Feb-20
-        22:28:19 GMT; path=/; domain=.locationiq.com; HttpOnly; SameSite=Lax
+      - __cfduid=dc4e096ab8e9dc2dda5ad9b5f1b1b8d801579308521; expires=Mon, 17-Feb-20
+        00:48:41 GMT; path=/; domain=.locationiq.com; HttpOnly; SameSite=Lax
       X-Powered-By:
       - LocationIQ
       Access-Control-Allow-Origin:
@@ -42,7 +42,7 @@ http_interactions:
       Server:
       - cloudflare
       Cf-Ray:
-      - 556bc2f37e81eebe-GRU
+      - 556c9090f8e2f657-GRU
     body:
       encoding: ASCII-8BIT
       string: '[{"place_id":"3661850","licence":"https:\/\/locationiq.com\/attribution","osm_type":"node","osm_id":"417346627","boundingbox":["52.5074575","52.5075575","13.3903237","13.3904237"],"lat":"52.5075075","lon":"13.3903737","display_name":"Checkpoint
@@ -65,5 +65,5 @@ http_interactions:
         Charlie, Rruga Brigada VIII, Ish Merkata, Nj\u00ebsia Bashkiake Nr. 10, Tirana,
         Tirana Municipally, Tirana County, Central Albania, 1000, Albania","class":"amenity","type":"pub","importance":0.201,"icon":"https:\/\/locationiq.org\/static\/images\/mapicons\/food_pub.p.20.png"}]'
     http_version: 
-  recorded_at: Fri, 17 Jan 2020 22:28:19 GMT
+  recorded_at: Sat, 18 Jan 2020 00:48:41 GMT
 recorded_with: VCR 5.0.0
