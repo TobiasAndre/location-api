@@ -7,6 +7,7 @@ AllCops:
     - bin/bundle
     - bin/rails_helper
     - config/**/*
+    - db/**/*
     - test/test_helper.rb
     - spec/**/*
 # Commonly used screens these days easily fit more than 80 characters.

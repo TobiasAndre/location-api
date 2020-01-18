@@ -9,8 +9,8 @@ class User < ApplicationRecord
 
   def payload
     {
-      email: self.email,
-      password: self.password_digest
+      email: email,
+      password: password_digest
     }
   end
 end
