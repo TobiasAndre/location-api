@@ -3,10 +3,12 @@
 require "rails_helper"
 
 describe LocationsController, type: :request do
+  let!(:user) { create(:user) }
+
   describe "GET #convert" do
     context "when params is missing" do
       it "return unprocessable entity (422)", :vcr do
-        get "/api/coordinates/search", params: {}
+        get "/api/coordinates/search", params: {}, headers: { "Authorization" => "Bearer #{user.token}" }
         expect(response).to have_http_status(422)
       end
     end
@@ -15,7 +17,7 @@ describe LocationsController, type: :request do
   context "when request with valid params" do
     let(:location_params) { { location: "checkpoint charlie" } }
     it "return valid quote and status 200", :vcr do
-      get "/api/coordinates/search", params: location_params
+      get "/api/coordinates/search", params: location_params, headers: { "Authorization" => "Bearer #{user.token}" }
       expect(response).to have_http_status(200)
     end
   end
@@ -27,7 +29,7 @@ describe LocationsController, type: :request do
     end
 
     it "rescue LocationUnavailable", :vcr do
-      get "/api/coordinates/search", params: location_params
+      get "/api/coordinates/search", params: location_params, headers: { "Authorization" => "Bearer #{user.token}" }
       expect(response).to have_http_status(422)
       expect(JSON.parse(response.body)).to eq("error" => "Location not found")
     end

@@ -19,7 +19,24 @@ RSpec.configure do |config|
         title: 'Location API',
         version: 'v1'
       },
-      paths: {}
+      paths: {},
+      components: {
+        securitySchemes: {
+          bearerAuth: {
+            type: :http,
+            scheme: :bearer,
+            bearerFormat: :JWT 
+          },
+          bearer: {
+            type: :bearer,
+            name: 'Authorization',
+            in: :header
+          }
+        }
+      },
+      security:{
+        bearerAuth: []
+      }
     }
   }
 
