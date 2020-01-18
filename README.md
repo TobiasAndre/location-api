@@ -1,23 +1,32 @@
-# README
+# LOCATION API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project is a Ruby on Rails API that searches coordinates about an address or location name.
+[LocationIQ](https://locationiq.com/) is used to search a string parameter and return a list of coordinates.
+The Location API returns the first result returned.
 
-Things you may want to cover:
+* Ruby version: 2.6.3
 
-* Ruby version
+* Rails version: 6.0.2
 
-* System dependencies
+* Database: PostgreSQL
 
-* Configuration
+* Database initialization:
+  
+  `$ rails db:setup`
 
-* Database creation
+* How to run the test suite:
 
-* Database initialization
+  `$ rspec`
 
-* How to run the test suite
+* Services and cache
+  
+  This API uses REDIS to cache results, for 30 days.
 
-* Services (job queues, cache servers, search engines, etc.)
+* Documentation
+  
+  Access API documentation at:
+
+  [http://localhost:3000/api-docs](http://localhost:3000/api-docs)
 
 * Deployment instructions
 

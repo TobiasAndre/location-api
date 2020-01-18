@@ -1,0 +1,29 @@
+---
+openapi: 3.0.1
+info:
+  title: Location API
+  version: v1
+paths:
+  "/api/coordinates/search":
+    parameters:
+    - in: query
+      name: location
+      schema:
+        type: string
+      description: The location name or address
+      required: true
+    get:
+      summary: Search location coordinates
+      tags:
+      - Location coordinates
+      consumes:
+      - application/json
+      produces:
+      - application/json
+      responses:
+        '200':
+          description: location found
+        '404':
+          description: location not found
+        '422':
+          description: all parameters are required
